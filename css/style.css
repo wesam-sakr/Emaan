@@ -1,0 +1,331 @@
+/* Theme Variables */
+:root {
+   --white: #fff;
+
+   /* Layout */
+   --gutter-x: 8rem;
+
+   /* Opacity channels */
+   --whiteOp: 255, 255, 255;
+   --blackOp: 0, 0, 0;
+}
+
+@font-face {
+   font-family: "the-sans";
+   src: url("../font/ArbFONTS-TheSansArabic-Light.otf");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "the-sans";
+   src: url("../font/ArbFONTS-TheSans-Bold-alinma.ttf");
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "the-sans";
+   src: url("../font/ArbFONTS-TheSans-Plain.otf");
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+/* -------------------------------------------------- */
+/* Global Styles */
+* {
+   font-family: 'the-sans', sans-serif !important;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+}
+
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+
+html {
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+}
+
+body {
+   padding: 0 !important;
+   overflow-x: hidden;
+   margin: 0 !important;
+   color: initial;
+}
+
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   vertical-align: middle;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+   display: block;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+img {
+   width: 100%;
+}
+
+::-webkit-scrollbar {
+   height: .5rem;
+   width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+   background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: var(--dark-gray);
+   border-radius: 8px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   -ms-border-radius: 8px;
+   -o-border-radius: 8px;
+}
+
+::selection {
+   background: rgba(var(--blackOp), .65);
+   line-height: auto;
+}
+
+.container-fluid {
+   --bs-gutter-x: var(--gutter-x) !important;
+}
+
+
+/* ------------- navbar ------------ */
+.intro header {
+   position: fixed;
+   top: 0;
+   inset-inline: 0;
+   background: transparent;
+   z-index: 99;
+}
+
+.toggle-websites .dropdown-toggle {
+   font-size: 34px;
+}
+
+.toggle-websites .dropdown-toggle::after {
+   content: unset;
+}
+
+.toggle-websites .dropdown-menu {
+   background: transparent;
+   box-shadow: unset;
+}
+
+.toggle-websites .dropdown-menu .dropdown-item {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   text-transform: uppercase;
+   border-radius: 70px;
+   padding-block: 6px;
+   background: #003555;
+   border: 1px solid;
+   margin-bottom: 10px;
+}
+
+.toggle-websites .dropdown-menu .dropdown-item img {
+   width: 20px;
+}
+
+.toggle-websites .dropdown-menu li:first-child .dropdown-item {
+   border-color: #3891bc;
+}
+
+.toggle-websites .dropdown-menu li:nth-child(2) .dropdown-item {
+   border-color: #3cb752;
+}
+
+.toggle-websites .dropdown-menu li:last-child .dropdown-item {
+   border-color: #836344;
+}
+
+.toggle-websites a {
+   position: relative;
+   display: flex;
+   align-items: center;
+   gap: 18px;
+   font-size: 14px;
+}
+
+.toggle-websites .helper-pages li:not(:last-child) a::after {
+   content: "";
+   display: inline-flex;
+   width: 18px;
+   height: 40px;
+   border-inline-start: 1px solid rgba(var(--whiteOp), 0.5);
+}
+
+.toggle-websites a img {
+   width: 46px;
+}
+
+.intro .hero-sec {
+   height: 100vh;
+}
+
+.video-background {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   /* يغطي الشاشة بالكامل */
+   overflow: hidden;
+}
+
+.video-background video {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   min-width: 100%;
+   min-height: 100%;
+   transform: translate(-50%, -50%);
+   object-fit: cover;
+   z-index: -1;
+}
+
+.video-background .video-content {
+   position: relative;
+   z-index: 1;
+   color: #fff;
+   text-align: end;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: max-content;
+   margin: auto;
+   justify-content: center;
+}
+
+@font-face {
+   font-family: "EMAAN";
+   src: url("../font/FontsFree-Net.ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+
+.video-background .video-content h1 {
+   font-family: "EMAAN" !important;
+   font-size: 7rem;
+   line-height: .85;
+   letter-spacing: 16px;
+}
+
+.video-background .video-content p {
+   font-family: "arial" !important;
+   font-weight: 500;
+}
+
+.main-nav.fixed {
+   position: fixed;
+   top: -1px !important;
+   width: 100%;
+   z-index: 999;
+   background: var(--main);
+   padding: 0 !important;
+}

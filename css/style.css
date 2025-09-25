@@ -178,7 +178,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-   background-color: var(--dark-gray);
+   background-color: var(--main);
    border-radius: 8px;
    -webkit-border-radius: 8px;
    -moz-border-radius: 8px;

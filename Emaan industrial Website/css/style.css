@@ -235,7 +235,6 @@ option {
    inset: 0;
 }
 
-.select2-container .select2-selection--single,
 .form-control,
 .form-select {
    background-color: transparent !important;
@@ -558,12 +557,13 @@ nav.navbar .container-fluid {
 .services .service .service-img {
    position: relative;
 }
+
 .services .service img {
    aspect-ratio: 11 / 6;
    object-fit: cover;
 }
 
-.services .service .service-img::before{
+.services .service .service-img::before {
    content: '';
    width: calc(calc(var(--gutter-x) * .5) - 20px);
    height: 100%;
@@ -578,7 +578,7 @@ nav.navbar .container-fluid {
    -o-transform: translate(calc(100% + 20px));
 }
 
-.services .service:nth-child(even) .service-img::before{
+.services .service:nth-child(even) .service-img::before {
    inset-inline-start: unset;
    inset-inline-end: 0;
    transform: translate(calc(-100% - 20px));
@@ -596,16 +596,17 @@ nav.navbar .container-fluid {
    color: var(--txt);
 }
 
-@media(min-width: 992px){
+@media(min-width: 992px) {
    .services .service:nth-child(odd) .service-content {
-   padding-inline-start: 4rem;
+      padding-inline-start: 4rem;
+   }
+
+   .services .service:nth-child(even) .service-content {
+      padding-inline-end: 4rem;
+   }
+
 }
 
-.services .service:nth-child(even) .service-content {
-   padding-inline-end: 4rem;
-}
-
-}
 /* --------------------- footer --------------------- */
 footer {
    background: var(--main);

@@ -30,7 +30,7 @@ $(document).ready(function () {
         items: 2,
       },
       578: {
-        items: 2,
+        items: 4,
       },
       992: {
         items: 5,
@@ -43,6 +43,8 @@ $(document).ready(function () {
     }
   });
   
+  var $externalCarousel = $(".external-programs .owl-carousel");
+  var externalItemsCount = $externalCarousel.find(".card").length; // عدد العناصر
   $(".external-programs .owl-carousel").owlCarousel({
     nav: false,
     loop: false,
@@ -53,12 +55,58 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 2,
+        margin: 30,
+        stagePadding: 20,
       },
       578: {
-        items: 2,
+        stagePadding: 40,
+        items: 3,
       },
       992: {
+        stagePadding: 40,
         items: 4
+      },
+      1200:{
+        items: 4,
+        mouseDrag: externalItemsCount > 4, // السماح بالسحب فقط لو >=4 
+        touchDrag: externalItemsCount > 4
+      }
+    }
+  });
+
+  $(".program-slider .owl-carousel").owlCarousel({
+    nav: false,
+    loop: false,
+    dots: true,
+    responsiveClass: true,
+    margin: 60,
+    rtl: dirAr,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      992: {
+        items: 2,
+      },
+      1200:{
+        items: 3,
+      }
+    }
+  });
+
+  $(".external.program-slider .owl-carousel").owlCarousel({
+    nav: false,
+    loop: false,
+    dots: true,
+    responsiveClass: true,
+    margin: 60,
+    rtl: dirAr,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      992: {
+        items: 2,
       }
     }
   });

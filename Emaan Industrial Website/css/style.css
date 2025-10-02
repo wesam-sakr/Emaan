@@ -344,6 +344,7 @@ nav.navbar .container-fluid {
 .navbar-nav li a {
    position: relative;
    font-size: .85rem;
+   color: var(--main) !important;
 }
 
 .navbar-nav>li:not(:last-child)>a::before {
@@ -355,7 +356,7 @@ nav.navbar .container-fluid {
    display: inline-flex;
    width: 1px;
    height: 18px;
-   border-inline-end: 1px solid rgba(var(--mainOp), .75);
+   border-inline-end: 1px solid #6D6E70;
    -webkit-transform: translateY(-50%);
    -moz-transform: translateY(-50%);
    -ms-transform: translateY(-50%);

@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
   // website lang
   var bodyDir = $("body").css("direction");
   console.log(bodyDir);

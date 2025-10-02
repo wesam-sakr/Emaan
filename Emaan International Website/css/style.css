@@ -456,12 +456,12 @@ nav.navbar .container-fluid {
    height: 94vh;
 }
 
-.hero-overlay {
+/* .hero-overlay {
    background: linear-gradient(to right,
          rgba(255, 255, 255, 0.08) 20%,
          rgba(40, 62, 106, 0.8) 80%);
 
-}
+} */
 
 .hero-sec .content {
    padding-block: 4rem 6rem;
@@ -552,7 +552,7 @@ nav.navbar .container-fluid {
 .solutions .solution {
    height: 100%;
    border: 1px solid var(--white);
-   padding: 5.5rem 1rem;
+   padding: 3.5rem 1rem;
    border-radius: 50% / 25%;
    -webkit-border-radius: 50% / 25%;
    -moz-border-radius: 50% / 25%;

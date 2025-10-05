@@ -442,6 +442,11 @@ nav.navbar .container-fluid {
    background-size: contain;
 }
 
+html[dir="ltr"] .secTitle::before {
+   transform: scaleX(-1);
+}
+
+
 /* --------------- .hero-sec --------------------- */
 .hero-sec {
    position: relative;

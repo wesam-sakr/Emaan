@@ -427,6 +427,30 @@ nav.navbar .container-fluid {
    height: 94vh;
 }
 
+/* لما تكون الصفحة بالعربية */
+html[dir="ltr"] .hero-sec ,
+html[dir="ltr"] .breadcrumb-wrapper{
+   transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   -moz-transform: scaleX(-1);
+   -ms-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+}
+
+/* علشان الكلام أو المحتوى جواها مايتقلبش */
+html[dir="ltr"] .hero-sec .content ,
+html[dir="ltr"] .breadcrumb-wrapper .hero-overlay{
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+}
+
+html[dir="ltr"] .secTitle::before {
+   transform: scaleX(-1);
+}
+
 .hero-sec .content {
    padding-block: 4rem 6rem;
    height: 100%;
@@ -550,7 +574,7 @@ nav.navbar .container-fluid {
 
 .products .divider {
    padding-block: 4rem;
-   background-size: cover;
+   background-size: cover !important;
    text-align: center;
    color: var(--white);
 }
@@ -587,6 +611,21 @@ nav.navbar .container-fluid {
    -moz-transform: translate(calc(-100% - 20px));
    -ms-transform: translate(calc(-100% - 20px));
    -o-transform: translate(calc(-100% - 20px));
+}
+
+html[dir="ltr"] .services .service .service-img::before {
+   transform: translate(calc(-100% - 20px));
+   -webkit-transform: translate(calc(-100% - 20px));
+   -moz-transform: translate(calc(-100% - 20px));
+   -ms-transform: translate(calc(-100% - 20px));
+   -o-transform: translate(calc(-100% - 20px));
+}
+html[dir="ltr"] .services .service:nth-child(even) .service-img::before {
+   transform: translate(calc(100% + 20px));
+   -webkit-transform: translate(calc(100% + 20px));
+   -moz-transform: translate(calc(100% + 20px));
+   -ms-transform: translate(calc(100% + 20px));
+   -o-transform: translate(calc(100% + 20px));
 }
 
 .services .service:nth-child(even) {

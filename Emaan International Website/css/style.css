@@ -456,6 +456,31 @@ nav.navbar .container-fluid {
    height: 94vh;
 }
 
+/* لما تكون الصفحة بالعربية */
+html[dir="ltr"] .hero-sec ,
+html[dir="ltr"] .breadcrumb-wrapper{
+   transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   -moz-transform: scaleX(-1);
+   -ms-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+}
+
+/* علشان الكلام أو المحتوى جواها مايتقلبش */
+html[dir="ltr"] .hero-sec .content ,
+html[dir="ltr"] .breadcrumb-wrapper .hero-overlay{
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+}
+
+html[dir="ltr"] .secTitle::before ,
+html[dir="ltr"] .secTitle.double::after {
+   transform: scaleX(-1);
+}
+
 /* .hero-overlay {
    background: linear-gradient(to right,
          rgba(255, 255, 255, 0.08) 20%,
